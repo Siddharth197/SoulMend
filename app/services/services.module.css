@@ -1,0 +1,325 @@
+/* Services Page Styles */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #1a4038 100%);
+    padding: 5rem 0 4rem;
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+}
+
+.heroTitle {
+    font-size: 3rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Services Grid */
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2.5rem;
+}
+
+.serviceCard {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.serviceCard:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--accent-gold);
+}
+
+/* Badge */
+.badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 3;
+    box-shadow: var(--shadow-md);
+}
+
+.popular {
+    background: linear-gradient(135deg, var(--accent-gold) 0%, #B8941F 100%);
+    color: var(--text-dark);
+}
+
+.bestValue {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    color: white;
+}
+
+.new {
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    color: white;
+}
+
+/* Image */
+.imageWrapper {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.serviceImage {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform var(--transition-slow);
+    position: relative;
+}
+
+.serviceImage::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(46, 92, 85, 0.2) 0%, rgba(26, 64, 56, 0.2) 100%);
+}
+
+.serviceCard:hover .serviceImage {
+    transform: scale(1.1);
+}
+
+/* Card Content */
+.cardContent {
+    padding: 2rem;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.serviceName {
+    font-size: 1.75rem;
+    color: var(--primary-green);
+    font-weight: 800;
+    margin: 0;
+    flex: 1;
+}
+
+.duration {
+    background: var(--bg-light);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    white-space: nowrap;
+}
+
+.description {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Benefits */
+.benefits {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+}
+
+.benefits h4 {
+    font-size: 1rem;
+    color: var(--primary-green);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.benefits li {
+    font-size: 0.9rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Card Footer */
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--border-light);
+    gap: 1rem;
+}
+
+.priceSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-green);
+    line-height: 1;
+}
+
+.priceLabel {
+    font-size: 0.75rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Why Section */
+.whySection {
+    background: var(--bg-light);
+    padding: var(--space-2xl) 0;
+    margin-top: 4rem;
+}
+
+.whyGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.whyCard {
+    background: var(--bg-white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+}
+
+.whyCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.whyIcon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.whyCard h3 {
+    font-size: 1.25rem;
+    color: var(--primary-green);
+    margin-bottom: 0.75rem;
+}
+
+.whyCard p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.ctaSection {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #1a4038 100%);
+    padding: 5rem 0;
+    text-align: center;
+    color: var(--text-light);
+    margin-top: 4rem;
+}
+
+.ctaSection h2 {
+    font-size: 2.5rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.ctaSection p {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    margin-bottom: 2.5rem;
+}
+
+.ctaButtons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2.25rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1.125rem;
+    }
+
+    .servicesGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .cardHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .benefits ul {
+        grid-template-columns: 1fr;
+    }
+
+    .cardFooter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cardFooter .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .whyGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .ctaSection h2 {
+        font-size: 2rem;
+    }
+
+    .ctaButtons {
+        flex-direction: column;
+    }
+}

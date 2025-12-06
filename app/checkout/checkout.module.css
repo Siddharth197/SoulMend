@@ -1,0 +1,128 @@
+.checkoutContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.checkoutForm {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.checkoutForm h2 {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: var(--primary-green);
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.orderSummary {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.orderSummary h2 {
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+}
+
+.orderItems {
+    margin-bottom: 1.5rem;
+}
+
+.orderItem {
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.orderItem img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.orderItem h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.orderItem p {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.orderItem span {
+    font-weight: 700;
+    color: var(--primary-green);
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.summaryRow.total {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    border-bottom: none;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .checkoutContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+}

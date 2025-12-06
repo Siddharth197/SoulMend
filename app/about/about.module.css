@@ -1,0 +1,387 @@
+/* About Page Styles */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #1a4038 100%);
+    padding: 5rem 0 4rem;
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 4rem;
+}
+
+.heroTitle {
+    font-size: 3.5rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.heroSubtitle {
+    font-size: 1.35rem;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Story Section */
+.storySection {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.storyContent h2 {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.storyContent h2::after {
+    margin: 1rem 0 0 0;
+}
+
+.storyText {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.storyText strong {
+    color: var(--primary-green);
+    font-weight: 700;
+}
+
+.storyImage {
+    position: relative;
+}
+
+.imageCard {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    transform: rotate(2deg);
+    transition: transform var(--transition-base);
+}
+
+.imageCard:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.imageCard img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Mission Section */
+.missionSection {
+    background: var(--bg-light);
+    padding: var(--space-2xl) 0;
+    margin: 4rem 0;
+}
+
+.missionGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.missionCard {
+    background: var(--bg-white);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: all var(--transition-base);
+    border: 2px solid transparent;
+}
+
+.missionCard:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--accent-gold);
+}
+
+.missionIcon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.missionCard h3 {
+    font-size: 1.75rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.missionCard p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+/* Values Grid */
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.valueCard {
+    background: var(--bg-white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: all var(--transition-base);
+    border-top: 4px solid var(--accent-gold);
+}
+
+.valueCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.valueIcon {
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.valueCard h3 {
+    font-size: 1.25rem;
+    color: var(--primary-green);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.valueCard p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Stats Section */
+.statsSection {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #1a4038 100%);
+    padding: 4rem 0;
+    margin: 4rem 0;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    text-align: center;
+}
+
+.statCard {
+    color: var(--text-light);
+}
+
+.statNumber {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+    margin-bottom: 0.75rem;
+    line-height: 1;
+}
+
+.statLabel {
+    font-size: 1.125rem;
+    opacity: 0.95;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Why Choose Us */
+.whyGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.whyCard {
+    background: var(--bg-light);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.whyCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-gold) 0%, var(--primary-green) 100%);
+}
+
+.whyCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    background: var(--bg-white);
+}
+
+.whyNumber {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.whyCard h3 {
+    font-size: 1.35rem;
+    color: var(--primary-green);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.whyCard p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Company Section */
+.companySection {
+    background: var(--bg-light);
+    padding: var(--space-2xl) 0;
+    margin-top: 4rem;
+}
+
+.companyCard {
+    background: var(--bg-white);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.companyCard h2 {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+}
+
+.companyText {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.contactInfo {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.contactIcon {
+    font-size: 1.5rem;
+}
+
+/* CTA Section */
+.ctaSection {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #1a4038 100%);
+    padding: 5rem 0;
+    text-align: center;
+    color: var(--text-light);
+    margin-top: 4rem;
+}
+
+.ctaSection h2 {
+    font-size: 2.75rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.ctaSection p {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    margin-bottom: 2.5rem;
+}
+
+.ctaButtons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .storySection {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .storyContent h2 {
+        text-align: center;
+    }
+
+    .storyContent h2::after {
+        margin: 1rem auto 0;
+    }
+
+    .missionGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1.125rem;
+    }
+
+    .valuesGrid,
+    .whyGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .contactInfo {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .ctaSection h2 {
+        font-size: 2rem;
+    }
+
+    .ctaButtons {
+        flex-direction: column;
+    }
+}

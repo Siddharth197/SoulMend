@@ -1,0 +1,153 @@
+/* FAQ Page Styles */
+
+.hero {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #1a4038 100%);
+    padding: 4rem 0 3rem;
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+}
+
+.heroTitle {
+    font-size: 3rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+}
+
+.faqContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.categorySection {
+    margin-bottom: 4rem;
+}
+
+.categoryTitle {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--accent-gold);
+}
+
+.questionsGrid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.faqCard {
+    background: var(--bg-white);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    border-left: 4px solid var(--accent-gold);
+}
+
+.faqCard:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.question {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.qIcon {
+    background: var(--primary-green);
+    color: var(--text-light);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.answer {
+    color: #666;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.aIcon {
+    background: var(--accent-gold);
+    color: var(--text-dark);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.ctaSection {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #1a4038 100%);
+    padding: 4rem 0;
+    text-align: center;
+    color: var(--text-light);
+    margin-top: 3rem;
+}
+
+.ctaSection h2 {
+    font-size: 2.5rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.ctaSection p {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+}
+
+.ctaButtons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2.25rem;
+    }
+
+    .categoryTitle {
+        font-size: 1.5rem;
+    }
+
+    .question {
+        font-size: 1.125rem;
+    }
+
+    .faqCard {
+        padding: 1.5rem;
+    }
+
+    .ctaButtons {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,148 @@
+/* Legal Pages Shared Styles */
+
+.legalPage {
+    padding: 4rem 0;
+    background: var(--bg-cream);
+}
+
+.legalPage h1 {
+    font-size: 3rem;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.lastUpdated {
+    text-align: center;
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 3rem;
+}
+
+.section {
+    background: var(--bg-white);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.section h2 {
+    font-size: 1.75rem;
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+.section h3 {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin: 1.5rem 0 1rem;
+    font-weight: 700;
+}
+
+.section p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.section ul,
+.section ol {
+    margin: 1rem 0 1.5rem 1.5rem;
+    line-height: 1.8;
+}
+
+.section li {
+    margin-bottom: 0.75rem;
+    color: #555;
+}
+
+.section strong {
+    color: var(--primary-green);
+    font-weight: 700;
+}
+
+.contactBox {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--accent-gold);
+    margin-top: 1.5rem;
+}
+
+.contactBox p {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.contactBox strong {
+    font-size: 1.125rem;
+}
+
+/* Shipping Page Specific */
+.shippingTable {
+    background: var(--bg-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+
+.tableRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.tableRow:last-child {
+    border-bottom: none;
+}
+
+.tableRow:first-child {
+    background: var(--primary-green);
+    color: var(--text-light);
+}
+
+.tableCell {
+    padding: 1rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .legalPage {
+        padding: 2rem 0;
+    }
+
+    .legalPage h1 {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 1.5rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .section h3 {
+        font-size: 1.125rem;
+    }
+
+    .section ul,
+    .section ol {
+        margin-left: 1rem;
+    }
+
+    .contactBox {
+        padding: 1.5rem;
+    }
+
+    .tableRow {
+        grid-template-columns: 1fr;
+    }
+
+    .tableCell {
+        padding: 0.75rem 1rem;
+    }
+}

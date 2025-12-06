@@ -1,0 +1,86 @@
+.authContainer {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #E8E8E0 0%, #F8F0E3 100%);
+}
+
+.authBox {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+}
+
+.authBox h1 {
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.formGroup input {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid #E8E8E0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.formGroup input:focus {
+    outline: none;
+    border-color: var(--primary-green);
+}
+
+.error {
+    background: #fee;
+    color: #c33;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border: 1px solid #fcc;
+}
+
+.switchAuth {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #666;
+}
+
+.switchAuth a {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.switchAuth a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .authBox {
+        padding: 2rem 1.5rem;
+    }
+}

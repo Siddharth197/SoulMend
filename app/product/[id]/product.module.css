@@ -1,0 +1,131 @@
+.productDetail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.imageSection {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.mainImage {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.infoSection {
+    padding: 1rem 0;
+}
+
+.productName {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.quantitySection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.quantitySection label {
+    font-weight: 600;
+}
+
+.quantityControls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.25rem;
+}
+
+.quantityControls button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: var(--primary-green);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.quantityControls button:hover {
+    opacity: 0.9;
+}
+
+.quantityControls span {
+    min-width: 40px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.details {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+}
+
+.details h3 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.details h3:first-child {
+    margin-top: 0;
+}
+
+.details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.details li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.details li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-green);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .productDetail {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .imageSection {
+        position: relative;
+        top: 0;
+    }
+}

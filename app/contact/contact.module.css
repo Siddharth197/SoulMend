@@ -1,0 +1,226 @@
+/* Contact Page Styles */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #1a4038 100%);
+    padding: 4rem 0 3rem;
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+}
+
+.heroTitle {
+    font-size: 3rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+}
+
+/* Contact Grid */
+.contactGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* Contact Info */
+.contactInfo h2 {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.infoText {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 2.5rem;
+}
+
+.infoCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.infoCard {
+    background: var(--bg-white);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: all var(--transition-base);
+    border-top: 3px solid var(--accent-gold);
+}
+
+.infoCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.infoIcon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.infoCard h3 {
+    font-size: 1.125rem;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+}
+
+.infoCard a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.25rem;
+    transition: color var(--transition-fast);
+}
+
+.infoCard a:hover {
+    color: var(--accent-gold);
+}
+
+.infoCard p {
+    font-size: 0.875rem;
+    color: #888;
+}
+
+/* Form Section */
+
+
+.formCard {
+    background: var(--bg-white);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.formCard h2 {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 2rem;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formGroup label {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    padding: 0.875rem;
+    border: 2px solid var(--border-light);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all var(--transition-fast);
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(46, 92, 85, 0.1);
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Company Section */
+.companySection {
+    background: var(--bg-light);
+    padding: var(--space-2xl) 0;
+    margin-top: 4rem;
+}
+
+.companyCard {
+    background: var(--bg-white);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.companyCard h2 {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.companyCard>p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.businessHours {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    margin-top: 2rem;
+}
+
+.businessHours h3 {
+    font-size: 1.25rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.businessHours p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .contactGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .infoCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2.25rem;
+    }
+
+    .infoCards {
+        grid-template-columns: 1fr;
+    }
+
+    .formCard {
+        padding: 2rem 1.5rem;
+    }
+}
