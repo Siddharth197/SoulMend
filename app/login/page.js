@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/context/AuthContext';
+import { supabase } from '@/lib/supabase';
 import styles from './auth.module.css';
 
 export default function LoginPage() {
@@ -18,6 +19,22 @@ export default function LoginPage() {
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleGoogleLogin = async () => {
+        try {
+            setLoading(true);
+            const { error } = await supabase.auth.signInWithOAuth({
+                provider: 'google',
+                options: {
+                    redirectTo: `${window.location.origin}/dashboard`,
+                },
+            });
+            if (error) throw error;
+        } catch (error) {
+            setError(error.message);
+            setLoading(false);
+        }
     };
 
     const handleSubmit = async (e) => {
@@ -46,6 +63,23 @@ export default function LoginPage() {
                         {error}
                     </div>
                 )}
+
+                <button
+                    onClick={handleGoogleLogin}
+                    className={styles.googleBtn}
+                    disabled={loading}
+                    type="button"
+                >
+                    <img
+                        src="https://www.svgrepo.com/show/475656/google-color.svg"
+                        alt="Google"
+                        width="20"
+                        height="20"
+                    />
+                    Sign in with Google
+                </button>
+
+                <div className={styles.divider}>or with email</div>
 
                 <form onSubmit={handleSubmit}>
                     <div className={styles.formGroup}>
